@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Laboratorio DevOps con GitHub Actions y AWS Learner Lab">
+  <title>CloudFlow | Laboratorio DevOps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="nav">
+    <a class="brand" href="#">
+      <span class="brand-icon">&lt;/&gt;</span>
+      <span>CloudFlow</span>
+    </a>
+    <nav>
+      <a href="#flujo">Flujo</a>
+      <a href="#cambios">Laboratorio</a>
+      <a class="nav-button" href="#estado">Estado</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge"><span></span> DEVOPS LAB · AWS + GITHUB</div>
+      <h1>Del código a <em>producción</em><br>en un solo flujo.</h1>
+      <p class="lead">
+        Un proyecto simple para aprender Git, ramas, Pull Requests,
+        GitHub Actions y despliegue automático sobre Amazon EC2.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#cambios">Comenzar laboratorio →</a>
+        <a class="button secondary" href="#flujo">Ver pipeline</a>
+      </div>
+      <div class="mini-stats">
+        <div><strong>v1.0</strong><span>Versión</span></div>
+        <div><strong>main</strong><span>Producción</span></div>
+        <div><strong>dev</strong><span>Desarrollo</span></div>
+      </div>
+    </section>
+
+    <section id="flujo" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">PIPELINE</span>
+        <h2>Un cambio. Cinco etapas.</h2>
+        <p>El merge hacia <code>main</code> activa automáticamente el despliegue.</p>
+      </div>
+
+      <div class="pipeline">
+        <article class="step"><span>01</span><div class="icon">⌨</div><h3>Código</h3><p>Editamos en <code>dev</code>.</p></article>
+        <div class="connector">→</div>
+        <article class="step"><span>02</span><div class="icon">⑂</div><h3>Pull Request</h3><p>Revisamos el cambio.</p></article>
+        <div class="connector">→</div>
+        <article class="step"><span>03</span><div class="icon">✓</div><h3>Main</h3><p>Fusionamos el PR.</p></article>
+        <div class="connector">→</div>
+        <article class="step"><span>04</span><div class="icon">⚡</div><h3>Actions</h3><p>Ejecutamos el workflow.</p></article>
+        <div class="connector">→</div>
+        <article class="step"><span>05</span><div class="icon">☁</div><h3>AWS EC2</h3><p>Apache publica el sitio.</p></article>
+      </div>
+    </section>
+
+    <section id="cambios" class="section lab-grid">
+      <div class="change-card">
+        <span class="eyebrow">CAMBIO #1</span>
+        <h2>Haz visible tu primer despliegue.</h2>
+        <p>Modifica estos textos desde la rama <code>dev</code>, crea un Pull Request y observa el cambio después del merge.</p>
+        <div class="editable-demo">
+          <span>MENSAJE DEL EQUIPO</span>
+          <strong>¡Nuestro primer despliegue automático funciona!</strong>
+          <small>Edita este texto en <code>index.html</code>.</small>
+        </div>
+      </div>
+
+      <div id="estado" class="status-card">
+        <div class="status-top">
+          <span>PRODUCTION</span>
+          <span class="live"><i></i> ONLINE</span>
+        </div>
+        <div class="terminal">
+          <p><span>$</span> git push origin dev</p>
+          <p><span>→</span> Pull Request creado</p>
+          <p><span>→</span> Merge a main</p>
+          <p><span>✓</span> GitHub Actions completado</p>
+          <p><span>✓</span> Apache actualizado</p>
+        </div>
+        <div class="deploy-info">
+          <div><span>Última carga</span><strong id="last-load">--:--:--</strong></div>
+          <div><span>Servidor</span><strong>Amazon EC2</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section challenge">
+      <span class="eyebrow">DESAFÍO EXTRA</span>
+      <h2>¿Qué cambiarías tú?</h2>
+      <div class="challenge-grid">
+        <div><b>01</b><span>Cambia el nombre<br>CloudFlow</span></div>
+        <div><b>02</b><span>Cambia el mensaje<br>del equipo</span></div>
+        <div><b>03</b><span>Agrega una tarjeta<br>al pipeline</span></div>
+        <div><b>04</b><span>Cambia la versión<br>v1.0 → v2.0</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>CloudFlow · Laboratorio Ingeniería DevOps</span>
+    <span>GitHub Actions → AWS Learner Lab</span>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
